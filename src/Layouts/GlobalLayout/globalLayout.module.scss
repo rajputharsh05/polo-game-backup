@@ -1,0 +1,193 @@
+.layoutWrapper {
+  background: "linear-gradient(90.23deg, #0C2E37 0.2%, #000000 129.15%)";
+  height: 100vh;
+}
+
+/* Hide scrollbar for modern browsers */
+.content_wrapper {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.content_wrapper::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Define Keyframe Animations
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  75% {
+    transform: translateX(-10px);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@mixin random-animation($duration: 2s) {
+  $animations: bounce;
+  $random-animation: nth($animations, random(length($animations)));
+
+  animation: #{$random-animation} #{$duration} infinite;
+}
+
+@mixin random-animation-id($duration: 2s) {
+  $animations: shake;
+  $random-animation: nth($animations, random(length($animations)));
+
+  animation: #{$random-animation} #{$duration} infinite;
+}
+// Button Style
+.animated_button {
+  position: fixed;
+  bottom: 2rem;
+  right: 1rem;
+  height: 18vh;
+  z-index: 1100;
+  border-radius: 1vh;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  // Apply Random Animation
+  @include random-animation(2s);
+
+  @media (max-width: 390px) {
+    bottom: 4rem;
+  }
+
+  @media (min-width: 300px) and (max-width: 600px) {
+    height: 14dvh;
+    right: 1rem;
+    bottom: 4rem;
+  }
+}
+
+.animated_id {
+  position: fixed;
+  bottom: 10vh;
+  left: 25vh;
+  z-index: 1100;
+  @include random-animation(2s);
+
+  @media (min-width: 200px) and (max-width: 700px) {
+    left: 0vh;
+    bottom: 4rem;
+  }
+}
+
+.IphoneStyle {
+  height: 100%;
+  aspect-ratio: 4 / 15;
+
+  @media (min-width: 200px) and (max-width: 389px) {
+    
+    margin-left: 13dvw;
+  }
+
+  @media (min-width: 390px) and (max-width: 700px) {
+    
+    margin-left: 11dvw;
+  }
+}
+
+[class^="ant-select "] {
+  background-color: white !important;
+}
+
+
+.marquee-wrapper {
+  height: 100%; 
+  width: 2vw; 
+  left: 0; 
+  overflow: hidden; 
+  background-color: black;
+
+    @media (min-width: 300px) and (max-width: 600px) {
+    width: 5vw;
+  }
+}
+
+.marquee-content {
+  color: white;
+  text-align: center;
+  animation: scrollUp 75s linear infinite; 
+  text-transform: uppercase;
+  
+}
+
+.marquee-text {
+   
+  writing-mode: vertical-lr; 
+  margin: 0 0 20px 0; 
+  color: inherit;
+  word-spacing: 5px;
+  letter-spacing:2px;
+  background: transparent;
+  white-space: nowrap;
+  text-shadow: 0 0 10px rgba(252, 61, 61, 0.759);
+}
+
+@keyframes scrollUp {
+  0% {
+    transform: translateY(0); 
+  }
+  100% {
+    transform: translateY(-50%); 
+  }
+}

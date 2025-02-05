@@ -1,0 +1,147 @@
+.header {
+  height: 10vh;
+  width: 100%;
+  padding: 0 0;
+  background-color: rgba(12, 46, 55, 1);
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.search {
+  width: 100%;
+  max-width: 400px;
+}
+
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin-right: 4vw;
+}
+
+.custom_tabs .ant-tabs-nav {
+  display: flex;
+  justify-content: space-between; /* Spread the tabs evenly */
+  width: 100%; /* Ensure the tabs take full width */
+}
+
+.custom_tabs .ant-tabs-tab {
+  flex: 1; /* Each tab takes equal width */
+  text-align: center; /* Center the text inside the tab */
+  color: red; /* Red tabs */
+  font-size: 18px; /* Larger font */
+  font-weight: bold;
+  padding: 10px 0; /* Add padding for better spacing */
+}
+
+.custom_tabs .ant-tabs-tab:hover {
+  color: darkred; /* Darker red on hover */
+}
+
+.custom_tabs .ant-tabs-tab.ant-tabs-tab-active {
+  color: red; /* Active tab stays red */
+  font-size: 22px; /* Slightly larger font for active tab */
+  font-weight: bold;
+}
+
+.custom_tabs .ant-tabs-ink-bar {
+  background-color: red; /* Red underline for active tab */
+  height: 4px; /* Thicker underline */
+}
+
+@media (max-width: 1024px) {
+  .search {
+    max-width: 300px; // Reduce search width
+  }
+
+  .button {
+    padding: 0 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .search {
+    max-width: 200px;
+  }
+
+  .button {
+    font-size: 12px;
+    margin-right: 5vw;
+    height: 3vh;
+  }
+  .logo {
+    height: 50%;
+    width: auto;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    height: 60%;
+  }
+
+  .search {
+    max-width: 150px;
+  }
+
+  .button {
+    font-size: 10px;
+    padding: 0 0.5rem;
+  }
+}
+
+.searchBarWrapper {
+  background-color: rgba(255, 255, 255, 0.1);
+  height: 50%;
+  display: flex;
+  align-items: center;
+  padding: 2vh;
+  border-radius: 3vh;
+}
+
+.searchBar {
+  background: transparent;
+  border: 0cm;
+  outline: none;
+}
+
+.vistorStyles {
+  height: 50%;
+  margin-left: 1rem;
+  width: 10vw;
+  border: 2px solid white;
+  background: #118e24;
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 2vh;
+  border-radius: 2vh;
+  align-items: center;
+}
+
+.Hover:hover {
+  cursor: pointer;
+}
+
+[class^="ant-modal-content"] {
+  background: linear-gradient(
+    20deg,
+    rgba(12, 46, 55, 1) 30.52%,
+    rgba(0, 0, 0, 1.2) 100%
+  ) !important;
+  color: white !important;
+}
+
+[class^="ant-modal"] {
+  color: white !important;
+}
+
+
+[class^="ant-form"]{
+  color: white !important;
+}
+
