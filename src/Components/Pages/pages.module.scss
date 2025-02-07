@@ -33,7 +33,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 8px; 
+    gap: 8px;
 
     .linkCard {
       border-radius: 8px;
@@ -41,8 +41,14 @@
       justify-content: center;
       align-items: center;
       cursor: pointer;
-      width: calc(33% - 4px); 
+      width: calc(33% - 4px);
       box-sizing: border-box;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+      &:hover {
+        transform: translateY(-8px) scale(1.05);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      }
 
       .linkContent {
         width: 100%;
@@ -58,12 +64,8 @@
         border-radius: 30px;
       }
     }
-
   }
 }
-
-
-
 
 .imageContainer {
   display: flex;
@@ -93,11 +95,10 @@
   }
 }
 
-
 @media screen and (max-width: 540px) {
   .card {
     .linkList {
-      gap: 8px; 
+      gap: 8px;
       .linkCard {
         width: calc(50% - 4px);
       }
