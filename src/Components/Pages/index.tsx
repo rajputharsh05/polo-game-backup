@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import styles from "./pages.module.scss";
 import axios from "axios";
-import { Card, Typography, Spin, message } from "antd";
+import { Typography, Spin, message } from "antd";
 
 const Pages = () => {
   const BASEURL = import.meta.env.VITE_BASEURL;
@@ -12,7 +12,7 @@ const Pages = () => {
   const getApiData = async () => {
     try {
       setLoading(true);
-      const response = await axios.get(`${BASEURL}/imagelink/items/`);
+      const response = await axios.get(`${BASEURL}/imagelinkforbackup/items/`);
       const data = response?.data;
       setData(data);
     } catch (error) {
@@ -39,7 +39,7 @@ const Pages = () => {
         </Typography.Text>
       </div>
 
-      <Card className={styles.card}>
+      <div className={styles.card}>
         {loading ? (
           <Spin size="large" />
         ) : (
@@ -56,23 +56,12 @@ const Pages = () => {
                     alt="Website Thumbnail"
                     className={styles.thumbnail}
                   />
-                  {/* <button className={styles.loginButton}>LOGIN</button> */}
-                  <img
-                    src="/images_for_redirection_page/login.png"
-                    alt="Login Button"
-                    className={styles.loginButton}
-                  />
-                  <img
-                    src="/images_for_redirection_page/pointer.png"
-                    alt="Arrow"
-                    className={styles.arrow}
-                  />
                 </div>
               </div>
             ))}
           </div>
         )}
-      </Card>
+      </div>
 
       <div className={styles.header}>
         <Typography.Title className={styles.title}>

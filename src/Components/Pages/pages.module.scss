@@ -27,28 +27,25 @@
 }
 
 .card {
- 
-  padding: 10px;
   border-radius: 10px;
 
   .linkList {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px; 
 
     .linkCard {
-      
       border-radius: 8px;
-      padding: 8px;
       display: flex;
       justify-content: center;
       align-items: center;
       cursor: pointer;
-      width: 100%;
+      width: calc(33% - 4px); 
+      box-sizing: border-box;
 
-      .linkContent{
+      .linkContent {
         width: 100%;
-        background-color: white;
         border-radius: 30px;
         display: flex;
         justify-content: center;
@@ -56,26 +53,17 @@
       }
 
       .thumbnail {
-        width: 70%;
+        width: 100%;
         height: auto;
         border-radius: 30px;
       }
-
-      .loginButton {
-        color: white;
-        border: none;
-        cursor: pointer;
-        height: 50px;
-      }
-
-      .arrow{
-        height: 60px;
-        margin-left: -40px;
-        margin-top: 30px;
-      }
     }
+
   }
 }
+
+
+
 
 .imageContainer {
   display: flex;
@@ -109,21 +97,13 @@
 @media screen and (max-width: 540px) {
   .card {
     .linkList {
-      .linkContent {
-        padding: 2%;
-      }
-      .loginButton{
-        height: 20px !important;
-      }
-      .arrow{
-        height: 30px !important;
-        margin-left: -17px !important;
-        margin-top: 13px !important;
+      gap: 8px; 
+      .linkCard {
+        width: calc(50% - 4px);
       }
     }
   }
-  .container{
+  .container {
     margin-bottom: 120px;
   }
-  
 }
