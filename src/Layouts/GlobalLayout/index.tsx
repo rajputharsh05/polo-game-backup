@@ -6,8 +6,8 @@ import { useEffect, useState } from "react";
 import icon from "../../assets/POLO clogo.png";
 import MobileHeader from "../../Components/MobileHeader";
 import axios from "axios";
-import onlineChatImg from "../../assets/cryptocurrency-color_chat.png";
-import whatsAppChatImg from "../../assets/logos_whatsapp-icon.png";
+// import onlineChatImg from "../../assets/cryptocurrency-color_chat.png";
+import whatsAppChatImg from "../../assets/social-media-whatsapp-gold-silver-logo-isolated-transparent-background (1).png";
 
 const { Content, Header } = Layout;
 
@@ -33,7 +33,7 @@ const GlobalLayout = () => {
 
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [isSidebarVisible, setIsSidebarVisible] = useState(true);
-  const [isChatVisible, setIsChatVisible] = useState(false); // Chat menu visibility
+  // const [isChatVisible, setIsChatVisible] = useState(false); // Chat menu visibility
 
   useEffect(() => {
     const handleResize = () => {
@@ -116,7 +116,7 @@ const GlobalLayout = () => {
 
       <div
         className={styles.animated_button}
-        onClick={() => setIsChatVisible(!isChatVisible)}
+        // onClick={() => setIsChatVisible(!isChatVisible)}
       >
         <img style={{ height: "100%" }} src={icon}></img>
       </div>
@@ -137,7 +137,7 @@ const GlobalLayout = () => {
         </div>
       }
 
-      {isChatVisible && (
+      {/* {isChatVisible && (
         <div
           onClick={() => {
             window.location.href = "tel:9333333330";
@@ -185,7 +185,7 @@ const GlobalLayout = () => {
             style={{ width: "70%" }}
           />
         </div>
-      )}
+      )} */}
     </Layout>
   );
 };

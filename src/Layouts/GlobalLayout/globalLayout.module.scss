@@ -120,7 +120,7 @@
 
 .animated_id {
   position: fixed;
-  bottom: 10vh;
+  bottom: 2vh;
   left: 25vh;
   z-index: 1100;
   @include random-animation(2s);
@@ -132,8 +132,7 @@
 }
 
 .IphoneStyle {
-  height: 100%;
-  aspect-ratio: 4 / 15;
+  height: 13dvh;
 
   @media (min-width: 200px) and (max-width: 389px) {
     

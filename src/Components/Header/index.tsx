@@ -20,6 +20,7 @@ import { WhatsApp } from "@mui/icons-material";
 import { useDispatch, useSelector } from "react-redux";
 import { updateState } from "../../Redux/loginModalSlice";
 import { login } from "../../Redux/AuthSlice";
+import switchIcon from "../../assets/sWITCH (1).gif";
 
 interface CountryFlags {
   name: string;
@@ -323,7 +324,7 @@ const HeaderComponent = () => {
         )}
 
         <div>
-          <Button
+          {/* <Button
             onClick={() => {
               window.location.href = "https://polo.game";
             }}
@@ -335,9 +336,17 @@ const HeaderComponent = () => {
               backgroundColor: "#940101",
               borderRadius: "2dvh",
             }}
+            icon={switch}
           >
             Switch to Polo Game
-          </Button>
+          </Button> */}
+          <img
+            onClick={() => {
+              window.location.href = "https://polo.game";
+            }}
+            src={switchIcon}
+            style={{height:"10vh" , width:"100%"}}
+          ></img>
         </div>
       </Col>
       <Modal

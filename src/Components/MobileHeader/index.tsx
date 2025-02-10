@@ -1,7 +1,8 @@
 import styles from "./mobileHeader.module.scss";
 import img from "../../assets/Polo_Logo_Png[1] 1.png";
+import switchIcon from "../../assets/sWITCH (1).gif";
 
-import { Button, Row } from "antd";
+import { Row } from "antd";
 
 const MobileHeader = () => {
   return (
@@ -10,21 +11,13 @@ const MobileHeader = () => {
         <img className={styles.img} src={img} alt="Center Logo" />
       </div>
       <Row style={{ marginTop: "2vh" }} justify={"center"}>
-        <Button
+        <img
           onClick={() => {
             window.location.href = "https://polo.game";
           }}
-          style={{
-            fontFamily: "Popins",
-            color: "white",
-            fontSize: "16px",
-            fontWeight: "400",
-            backgroundColor: "#940101",
-            borderRadius: "2dvh",
-          }}
-        >
-          Switch to Polo Game
-        </Button>
+          src={switchIcon}
+          style={{ height: "10vh"}}
+        ></img>
       </Row>
     </div>
   );
