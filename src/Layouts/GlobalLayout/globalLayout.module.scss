@@ -92,72 +92,19 @@
   animation: #{$random-animation} #{$duration} infinite;
 }
 // Button Style
-.animated_button {
-  position: fixed;
-  bottom: 2rem;
-  right: 1rem;
-  height: 18vh;
-  z-index: 1100;
-  border-radius: 1vh;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  // Apply Random Animation
-  @include random-animation(2s);
-
-  @media (max-width: 390px) {
-    bottom: 4rem;
-  }
-
-  @media (min-width: 300px) and (max-width: 600px) {
-    height: 14dvh;
-    right: 1rem;
-    bottom: 4rem;
-  }
-}
-
-.animated_id {
-  position: fixed;
-  bottom: 2vh;
-  left: 25vh;
-  z-index: 1100;
-  @include random-animation(2s);
-
-  @media (min-width: 200px) and (max-width: 700px) {
-    left: 0vh;
-    bottom: 4rem;
-  }
-}
-
-.IphoneStyle {
-  height: 13dvh;
-
-  @media (min-width: 200px) and (max-width: 389px) {
-    
-    margin-left: 13dvw;
-  }
-
-  @media (min-width: 390px) and (max-width: 700px) {
-    
-    margin-left: 11dvw;
-  }
-}
 
 [class^="ant-select "] {
   background-color: white !important;
 }
 
-
 .marquee-wrapper {
-  height: 100%; 
-  width: 2vw; 
-  left: 0; 
-  overflow: hidden; 
+  height: 100%;
+  width: 2vw;
+  left: 0;
+  overflow: hidden;
   background-color: black;
 
-    @media (min-width: 300px) and (max-width: 600px) {
+  @media (min-width: 300px) and (max-width: 600px) {
     width: 5vw;
   }
 }
@@ -165,18 +112,16 @@
 .marquee-content {
   color: white;
   text-align: center;
-  animation: scrollUp 75s linear infinite; 
+  animation: scrollUp 75s linear infinite;
   text-transform: uppercase;
-  
 }
 
 .marquee-text {
-   
-  writing-mode: vertical-lr; 
-  margin: 0 0 20px 0; 
+  writing-mode: vertical-lr;
+  margin: 0 0 20px 0;
   color: inherit;
   word-spacing: 5px;
-  letter-spacing:2px;
+  letter-spacing: 2px;
   background: transparent;
   white-space: nowrap;
   text-shadow: 0 0 10px rgba(252, 61, 61, 0.759);
@@ -184,9 +129,9 @@
 
 @keyframes scrollUp {
   0% {
-    transform: translateY(0); 
+    transform: translateY(0);
   }
   100% {
-    transform: translateY(-50%); 
+    transform: translateY(-50%);
   }
 }

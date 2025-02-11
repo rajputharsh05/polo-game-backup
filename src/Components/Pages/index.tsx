@@ -2,12 +2,14 @@ import { useEffect, useState } from "react";
 import styles from "./pages.module.scss";
 import axios from "axios";
 import { Typography, Spin, message } from "antd";
+import icon from "../../assets/POLO clogo.png";
+import whatsAppChatImg from "../../assets/social-media-whatsapp-gold-silver-logo-isolated-transparent-background (1).png";
+
 
 const Pages = () => {
   const BASEURL = import.meta.env.VITE_BASEURL;
   const [data, setData] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
-
 
   const getApiData = async () => {
     try {
@@ -64,6 +66,12 @@ const Pages = () => {
       </div>
 
       <div className={styles.header}>
+        <div>
+          <div className={styles.animated_button}>
+            <img style={{ height: "100%" }} src={icon}></img>
+          </div>
+        </div>
+
         <Typography.Title className={styles.title}>
           Choose your site
         </Typography.Title>
@@ -72,8 +80,23 @@ const Pages = () => {
           <br />
           excitement begin! 🎮🏇
         </Typography.Text>
+        <div>
+          <div className={styles.animated_id}>
+            <img
+              onClick={() => {
+                const phoneNumber = "9333333330";
+                const message = "Hello, I would like to connect with you!";
+                const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+                  message
+                )}`;
+                window.open(whatsappURL, "_blank");
+              }}
+              className={styles.IphoneStyle}
+              src={whatsAppChatImg}
+            ></img>
+          </div>
+        </div>
       </div>
-
 
       <div className={styles.imageContainer}>
         <div className={styles.imageItem}>
@@ -101,8 +124,6 @@ const Pages = () => {
           <p className={styles.imageText}>100% Secure</p>
         </div>
       </div>
-
-
     </div>
   );
 };

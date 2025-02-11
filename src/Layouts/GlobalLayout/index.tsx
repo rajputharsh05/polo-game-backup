@@ -3,11 +3,9 @@ import { useLocation, useOutlet } from "react-router-dom";
 import styles from "./globalLayout.module.scss";
 import HeaderComponent from "../../Components/Header";
 import { useEffect, useState } from "react";
-import icon from "../../assets/POLO clogo.png";
 import MobileHeader from "../../Components/MobileHeader";
 import axios from "axios";
 // import onlineChatImg from "../../assets/cryptocurrency-color_chat.png";
-import whatsAppChatImg from "../../assets/social-media-whatsapp-gold-silver-logo-isolated-transparent-background (1).png";
 
 const { Content, Header } = Layout;
 
@@ -114,78 +112,7 @@ const GlobalLayout = () => {
         </Content>
       </Layout>
 
-      <div
-        className={styles.animated_button}
-        // onClick={() => setIsChatVisible(!isChatVisible)}
-      >
-        <img style={{ height: "100%" }} src={icon}></img>
-      </div>
-      {
-        <div className={styles.animated_id}>
-          <img
-             onClick={() => {
-              const phoneNumber = "9333333330";
-              const message = "Hello, I would like to connect with you!";
-              const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-                message
-              )}`;
-              window.open(whatsappURL, "_blank");
-            }}
-            className={styles.IphoneStyle}
-            src={whatsAppChatImg}
-          ></img>
-        </div>
-      }
-
-      {/* {isChatVisible && (
-        <div
-          onClick={() => {
-            window.location.href = "tel:9333333330";
-          }}
-          style={{
-            position: "absolute",
-            bottom: "9rem",
-            right: "0rem",
-            zIndex: 1000,
-            fontSize: "16px",
-            fontWeight: "600",
-            cursor: "pointer",
-            boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
-          }}
-        >
-          <img src={onlineChatImg} alt="Online Chat" style={{ width: "70%" }} />
-        </div>
-      )}
-
-      {isChatVisible && (
-        <div
-          onClick={() => {
-            const phoneNumber = "9333333330";
-            const message = "Hello, I would like to connect with you!";
-            const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-              message
-            )}`;
-            window.open(whatsappURL, "_blank");
-          }}
-          style={{
-            position: "absolute",
-            bottom: "3rem",
-            right: "5rem",
-            zIndex: 1000,
-            borderRadius: "3vh",
-            fontSize: "16px",
-            fontWeight: "600",
-            cursor: "pointer",
-            boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
-          }}
-        >
-          <img
-            src={whatsAppChatImg}
-            alt="WhatsApp Chat"
-            style={{ width: "70%" }}
-          />
-        </div>
-      )} */}
+      
     </Layout>
   );
 };
