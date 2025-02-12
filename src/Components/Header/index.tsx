@@ -50,6 +50,8 @@ const HeaderComponent = () => {
 
   const [logoData, setLogodata] = useState<any>([]);
 
+  const [callUsModal, setCallUsModal] = useState<boolean>(false);
+
   const [countries, setCountries] = useState<[CountryFlags]>([
     {
       name: "IN",
@@ -268,6 +270,15 @@ const HeaderComponent = () => {
           justifyContent: "space-around",
           alignItems: "center",
         }}
+      ></Col>
+      <Col
+        span={10}
+        style={{
+          display: "flex",
+          justifyContent: "space-around",
+          alignItems: "center",
+        }}
+        className={styles.Hover}
       >
         {logoData?.map((item: any) => {
           return (
@@ -275,7 +286,6 @@ const HeaderComponent = () => {
               style={{
                 display: "flex",
                 alignItems: "center",
-
                 color: "white",
                 fontSize: "20px",
                 fontWeight: "500",
@@ -293,22 +303,12 @@ const HeaderComponent = () => {
             </div>
           );
         })}
-      </Col>
-      <Col
-        span={12}
-        style={{
-          display: "flex",
-          justifyContent: "space-around",
-          alignItems: "center",
-        }}
-        className={styles.Hover}
-      >
         {location.pathname !== "/admin" && (
           <div
+            onClick={() => setCallUsModal(true)}
             style={{
               display: "flex",
               alignItems: "center",
-
               color: "white",
               fontSize: "16px",
               fontWeight: "500",
@@ -324,28 +324,12 @@ const HeaderComponent = () => {
         )}
 
         <div>
-          {/* <Button
-            onClick={() => {
-              window.location.href = "https://polo.game";
-            }}
-            style={{
-              fontFamily: "Popins",
-              color: "white",
-              fontSize: "16px",
-              fontWeight: "400",
-              backgroundColor: "#940101",
-              borderRadius: "2dvh",
-            }}
-            icon={switch}
-          >
-            Switch to Polo Game
-          </Button> */}
           <img
             onClick={() => {
               window.location.href = "https://polo.game";
             }}
             src={switchIcon}
-            style={{height:"10vh" , width:"100%"}}
+            style={{ height: "10vh", width: "100%" }}
           ></img>
         </div>
       </Col>
@@ -804,6 +788,33 @@ const HeaderComponent = () => {
                 </Row>
               </>
             )}
+          </Row>
+        </Card>
+      </Modal>
+      <Modal
+        open={callUsModal}
+        footer=""
+        onClose={() => setCallUsModal(false)}
+        onCancel={() => setCallUsModal(false)}
+      >
+        <Card
+          title={
+            <Row
+              justify={"center"}
+              style={{ backgroundColor: "inherit", marginBottom: "2vh" }}
+            >
+              <img
+                src={logo} // Replace with the actual path to your logo
+                alt="Polo Games Logo"
+                style={{ height: "50px" }}
+              />
+            </Row>
+          }
+        >
+          <Row justify={"center"}>
+            <h2 style={{ color: "white", fontFamily: "Popins" }}>
+              Please call us on +91 9333333330{" "}
+            </h2>
           </Row>
         </Card>
       </Modal>
