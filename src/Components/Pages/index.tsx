@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import styles from "./pages.module.scss";
 import axios from "axios";
 import { Typography, Spin, message } from "antd";
-import icon from "../../assets/POLO clogo.png";
+import icon from "../../assets/premium support button copy.png";
 import whatsAppChatImg from "../../assets/social-media-whatsapp-gold-silver-logo-isolated-transparent-background (1).png";
 
 
