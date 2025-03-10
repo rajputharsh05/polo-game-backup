@@ -20,7 +20,7 @@ import { WhatsApp } from "@mui/icons-material";
 import { useDispatch, useSelector } from "react-redux";
 import { updateState } from "../../Redux/loginModalSlice";
 import { login } from "../../Redux/AuthSlice";
-import switchIcon from "../../assets/sWITCH (1).png";
+import switchIcon from "../../assets/switch to polo button.gif";
 
 interface CountryFlags {
   name: string;

@@ -1,6 +1,7 @@
 import styles from "./mobileHeader.module.scss";
 import img from "../../assets/Polo_Logo_Png[1] 1.png";
-import switchIcon from "../../assets/sWITCH (1).png";
+
+import switchIcon from "../../assets/switch to polo button.gif";
 
 import { Row } from "antd";
 
